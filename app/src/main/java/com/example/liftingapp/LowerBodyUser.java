@@ -5,28 +5,26 @@ import android.util.SparseArray;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpperBodyFocusedUser extends User {
-    private SparseArray<List<WeightLifting>> lifts;
-    private int daysOnUpper;
+public class LowerBodyUser extends User {
 
-    public UpperBodyFocusedUser(String name, double experienceLevel, int daysOfExercisePerWeek)
-    {
+    private SparseArray<List<WeightLifting>> lifts;
+    private int daysOnLower;
+
+    public LowerBodyUser(String name, double experienceLevel, int daysOfExercisePerWeek) {
         super(name, experienceLevel, daysOfExercisePerWeek);
         lifts = new SparseArray<>();
-        daysOnUpper = super.getDaysOfExercisePerWeek() / 3 + 1;
+        daysOnLower = (daysOfExercisePerWeek / 3) + 1;
     }
 
-    public List<WeightLifting> getLifts(int day)
-    {
+    public List<WeightLifting> getLifts(int day) {
         return lifts.get(day);
     }
 
-    public int getDaysOnUpper() {
-        return daysOnUpper;
+    public int getDaysOnLower() {
+        return daysOnLower;
     }
 
-    public void setLifts(int day, WeightLifting lift)
-    {
+    public void addLift(int day, WeightLifting lift) {
         if (lifts.get(day) != null) {
             if (lift.isAlreadyIn(lifts.get(day)))
                 return;

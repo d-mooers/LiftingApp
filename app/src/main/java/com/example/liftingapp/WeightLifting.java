@@ -8,5 +8,6 @@ public interface WeightLifting extends Comparable {
     double getDifficulty();
     String getMuscleGroup();
     List<String> getExampleVideoLinks();
+    boolean isAlreadyIn(List<WeightLifting> lifts);
 
 }
