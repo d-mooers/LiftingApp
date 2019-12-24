@@ -13,7 +13,7 @@ public class UpperBodyFocusedUser extends User {
     {
         super(name, experienceLevel, daysOfExercisePerWeek);
         lifts = new SparseArray<>();
-        daysOnUpper = super.getDaysOfExercisePerWeek() / 3 + 1;
+        daysOnUpper = daysOfExercisePerWeek / 3 + 1;
     }
 
     public List<WeightLifting> getLifts(int day)

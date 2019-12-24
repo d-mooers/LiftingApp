@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LiftingApp</string>
+    <string name="setUpProfile">Set Up Profile</string>
+    <string name="expLevel">On a scale of 0 to 100, what is your experience level?</string>
+    <string name="userName">Username</string>
+    <string name="daysExercise">How many days can you exercise per week?</string>
+    <string name="timePerWorkout">How many minutes can you spend per workout session?</string>
+    <string name="submit">Submit</string>
 </resources>
