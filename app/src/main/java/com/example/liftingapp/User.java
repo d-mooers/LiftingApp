@@ -3,23 +3,22 @@ package com.example.liftingapp;
 public class User {
 
     private String name;  // name of user
-    private double experienceLevel; // 0.00 - 100.00
+    private int experienceLevel; // 0.00 - 100.00
     private int daysOfExercisePerWeek;
-    private double timeGoal;  // minutes per gym session
+    private int minPerSession;  // minutes per gym session
 
     public User() {}
 
-    public User(String name, double experienceLevel, int daysOfExercisePerWeek, double timeGoal)
+    public User(String name, int experienceLevel, int daysOfExercisePerWeek, int minPerSession)
     {
         this.name = name;
         this.experienceLevel = experienceLevel;
         this.daysOfExercisePerWeek = daysOfExercisePerWeek;
-        this.timeGoal = timeGoal;
+        this.minPerSession = minPerSession;
     }
 
     public int getDaysOfExercisePerWeek()
     {
-
         return daysOfExercisePerWeek;
     }
 
@@ -31,7 +30,15 @@ public class User {
         return experienceLevel;
     }
 
-    public double getTimeGoal() {
-        return timeGoal;
+    public double getMinPerSession() {
+        return minPerSession;
+    }
+
+    public UpperBodyFocusedUser convertToUpper() {
+        return new UpperBodyFocusedUser(name, experienceLevel, daysOfExercisePerWeek, minPerSession);
+    }
+
+    public LowerBodyUser convertToLower() {
+        return new LowerBodyUser(name, experienceLevel, daysOfExercisePerWeek, minPerSession);
     }
 }

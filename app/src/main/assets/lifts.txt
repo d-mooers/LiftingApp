@@ -1,0 +1,6 @@
+Barbell Bench Press \t null \t 50 \t 15.0
+Dumbbell Bench Press \t null \t 30 \t 15.0
+Barbell Back Squat \t null \t 60 \t 15.0
+Dumbbell Flies \t null \t 25 \t 9.00
+Bodyweight Squats \t null \t 10 \t 5.0
+Walking \t null \t 5 \t 20.0

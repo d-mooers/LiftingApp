@@ -10,8 +10,9 @@ public class LowerBodyUser extends User {
     private SparseArray<List<WeightLifting>> lifts;
     private int daysOnLower;
 
-    public LowerBodyUser(String name, double experienceLevel, int daysOfExercisePerWeek) {
-        super(name, experienceLevel, daysOfExercisePerWeek);
+    public LowerBodyUser(String name, int experienceLevel, int daysOfExercisePerWeek,
+                         int minPerSession) {
+        super(name, experienceLevel, daysOfExercisePerWeek, minPerSession);
         lifts = new SparseArray<>();
         daysOnLower = (daysOfExercisePerWeek / 3) + 1;
     }
